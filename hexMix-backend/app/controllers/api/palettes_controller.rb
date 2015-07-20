@@ -1,38 +1,34 @@
 class Api::PalettesController < ApplicationController
- 
+  before_filter :set_default_response_format 
 
   def index
     @palettes = Palette.all
-    respond_to do |format|
-      format.json { render json: @palettes }
+    render json: @palettes 
     end
   end
 
   def show
     @palette = get_palette
-    respond_to do |format|
-      format.json { render json: @palette }
+    render json: @palette 
     end
   end
 
   def create
     @palette = Palette.new(palette_params)
-    respond_to do |format|
       if @palette.save
-        format.json { render json: @palette, status: 201 }
+        render json: @palette, status: 201 
       else
-        format.json { render json: @palette.errors, status: 422 }
+        render json: @palette.errors, status: 422 
       end
     end
   end
 
   def update
     @palette = get_palette
-    respond_to do |format|
       if @palette.update_attributes(palette_params)
-        format.json { render json: @palette, status: 201 }
+        render json: @palette, status: 201 
       else
-        format.json { render json: @palette.errors, status: 422 }
+        render json: @palette.errors, status: 422 
       end
     end
   end

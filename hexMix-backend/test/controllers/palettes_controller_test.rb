@@ -21,7 +21,7 @@ class Api::PalettesControllerTest < ActionController::TestCase
     end
 
   test 'POST creates with valid attributes' do 
-    attributes = { title: 'recycle', keyword: 'green' }
+    attributes = { title: 'test_title', keyword: 'test_keyword' }
     assert_difference('Palette.count', 1) do
       post :create, palette: attributes, format: :json
     end  
