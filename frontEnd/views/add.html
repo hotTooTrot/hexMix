@@ -7,37 +7,39 @@ INFORMATION
 GOES HERE
 
 -->
-<h2>Inspect tha Hex</h2>
+
 <div class="wrapper" ng-controller="MainController">
   <div class="input-boxes">
+    <h2 class="inspect">Inspect tha Hex</h2>
     <label>
        Palette Title:
-       <input type="text" name="palette title" ng-model="palette.title" placeholder="enter a name for your mix" required>
+       <input class="p-title" type="text" name="palette title" ng-model="palette.title" placeholder="enter a name for your mix" required><br />
     </label>
     <label>
        Keywords:
-       <input type="text" name="palette keyword" ng-model="palette.keyword" placeholder="tags, keywords, feelings, etc.">
+       <input class="p-title" type="text" name="palette keyword" ng-model="palette.keyword" placeholder="tags, keywords, feelings, etc.">
     </label>
+    <div class="color-row">
+      <h3>{{palette.title}}</h3><h5>{{palette.keyword}}</h5></h3>
+     <ul class="hexRectangle">
+    <li class="hex-area" id="hex1">
+      <input type="text" name="name" value="" ng-model="hex1" class="basic">
+    </li>
+    <li class="hex-area" id="hex2">
+      <input type="text" name="name" value="" ng-model="hexes.hex2" class="basic2">
+    </li>
+    <li class="hex-area" id="hex3">
+      <input type="text" name="name" value="" ng-model="hexes.hex3" class="basic3">
+    </li>
+    <li class="hex-area" id="hex4">
+      <input type="text" name="name" value="" ng-model="hexes.hex4" class="basic4">
+    </li>
+    <li class="hex-area" id="hex5">
+      <input type="text" name="name" value="" ng-model="hexes.hex5" class="basic5">
+    </li>
+  </ul>
   </div>
-  <div class="color-row">
-    <h3>{{palette.title}}</h3><h5>{{palette.keyword}}</h5></h3>
-   <ul class="hexRectangle">
-  <li class="hex-area" id="hex1">
-    <input type="text" name="name" value="" ng-model="hex1" class="basic">
-  </li>
-  <li class="hex-area" id="hex2">
-    <input type="text" name="name" value="" ng-model="hexes.hex2" class="basic2">
-  </li>
-  <li class="hex-area" id="hex3">
-    <input type="text" name="name" value="" ng-model="hexes.hex3" class="basic3">
-  </li>
-  <li class="hex-area" id="hex4">
-    <input type="text" name="name" value="" ng-model="hexes.hex4" class="basic4">
-  </li>
-  <li class="hex-area" id="hex5">
-    <input type="text" name="name" value="" ng-model="hexes.hex5" class="basic5">
-  </li>
-</ul>
+
 <button type="button" name="enter-palette" class="submit" ng-click="paletteSubmit(palette)">palettized!</button>
 <!--      Color: <ui-colorpicker ng-model="targetColor"></ui-colorpicker>
     <br />

@@ -1,4 +1,7 @@
+
+<div class="search-div">
 <input type="text" ng-model="search.keyword" placeholder="search keyword" class="Search">
+</div>
 <div class ="paletteMainPage" ng-repeat="palette in palettes">
   <ul>
     <li class="hexBox" style="color:{{palette.hexes.hex1}}"><div class="hexText hideInfo">{{palette.hexes.hex1}}</div></li>
@@ -11,7 +14,7 @@
     <ul>
       <li class="infoTitleText">{{palette.title}}</li>
       <li class="infoKeywordText">{{palette.keyword}}</li>
-      <li class="closeButton">Close</li>
+      <li class="closeButton"><button>Close</button></li>
     </ul>
   </div>
 </div>

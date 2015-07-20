@@ -3,27 +3,43 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
-  font-family: monospace;
+  font-family: sans-serif;
 }
-
+body {
+  background-color: #a8b2aa;
+}
 header {
   width: 100%;
-  height: 50px;
-  background-color: cyan;
+  height: 175px;
+  background-color: black;
   justify-content: center;
   line-height: 50px;
   display: flex;
   font-size: 2em;
 }
-
+.wrapper {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+.hexMixTitle {
+  margin-top: 1.2em;
+}
 .addLink {
   position: absolute;
   top: 15px;
   right: 15px;
 }
 .Search {
-  width: 100%;
+  width: 50%;
   text-align: center;
+  border-radius: 8px;
+  margin: 0 auto;
+  height: 2em;
+  display:flex;
+
 }
 
 .hexRectangle {
@@ -32,10 +48,16 @@ header {
   display: flex;
   margin: 0 auto;
 }
-
+h2 {
+  margin: 0 auto;
+  display:flex;
+  text-align: center;
+}
 .hex-area{
   width: 20%;
   height: 100%;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .hex-area > input {
@@ -44,5 +66,84 @@ header {
 }
 
 .full-spectrum .sp-palette {
-max-width: 200px;
+  max-width: 200px;
+}
+.fa {
+  color: white;
+}
+.search-div {
+  height:40px;
+  background-color: white;
+  padding-top: 8px;
+  text-align: center;
+}
+.rainbow-bar {
+  height: 4px;
+  margin-top: 3px;
+  margin-bottom: 6px;
+  background: -moz-linear-gradient(left, red, orange, yellow, green,
+  blue, indigo, violet);
+  background: -webkit-gradient(linear, left center, right center, from(red),
+  color-stop(14%, orange), color-stop(28%, yellow), color-stop(42%, green),
+  color-stop(56%, blue), color-stop(70%, indigo), to(violet));
+  background: -o-linear-gradient(left, red, orange, yellow, green,
+  blue, indigo, violet);
+  background: -ms-linear-gradient(left, red, orange, yellow, green,
+  blue, indigo, violet);
+}
+.infoTitleText {
+  font-size: 1.5em;
+  font-family: sans-serif;
+  margin-top: 18px;
+  border-top: 1px solid gray;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.infoKeywordText {
+  font-size: 1em;
+  font-family: sans-serif;
+  color: gray;
+}
+.submit {
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bolder;
+  height: 30px;
+  width: 8em;
+  border-radius: 8px;
+  background-color: #a8b2aa;
+  margin-top: 5em;
+}
+.closeButton {
+  border: 8px;
+  background-color: #a8b2aa;
+  color: #a8b2aa;
+}
+.paletteMainPage {
+  padding-left: 20px;
+}
+.hexbox {
+  width: 20%;
+}
+.color-row {
+  display: block;
+}
+.hex-area {
+  width: 20%;
+}
+.p-title {
+  border-radius: 8px;
+  height: 15px;
+  padding: 4px;
+  width: 15em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.input-boxes {
+  margin: 0 auto;
+}
+.inspect {
+  margin: 0 auto;
+  display: block;
 }
