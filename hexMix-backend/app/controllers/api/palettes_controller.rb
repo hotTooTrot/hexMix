@@ -1,5 +1,4 @@
 class Api::PalettesController < ApplicationController
- 
 
   def index
     @palettes = Palette.all
