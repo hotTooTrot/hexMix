@@ -9,11 +9,16 @@
 header {
   width: 100%;
   height: 50px;
-  background-color: cyan;
+  background-color: white;
   justify-content: center;
   line-height: 50px;
   display: flex;
   font-size: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .addLink {
@@ -90,7 +95,8 @@ max-width: 200px;
   width: 100%;
   height: 50px;
   margin: 0 auto;
-  background-color: #efefef;
+  background-color: black;
+  color: white;
 }
 
 .hideInfo {
@@ -148,12 +154,18 @@ max-width: 200px;
 .submit {
   width: 25%;
   height: 50px;
-  border-radius: 6px;
   font-size: 2em;
   background-color: red;
-  border-radius: 6px;
   line-height: 50px;
   text-align: center;
+  color: white;
+  text-decoration: none;
+  transition: all .5s ease;
+  margin-top: 10px;
+}
+.submit:hover {
+  background-color: #61bd6d;
+  width: 40%;
 }
 
 .sp-replacer {
@@ -167,4 +179,38 @@ max-width: 200px;
 .sp-preview {
   width: 80%;
   height: 80%;
+}
+
+@media only screen and (max-width: 1110px) {
+  .hexText:hover {
+    font-size: 3em;
+  }
+  .hexText {
+    font-size: 3em;
+  }
+  .hex-area {
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .hexText:hover {
+    font-size: 2em;
+  }
+  .hexText {
+    font-size: 2em;
+  }
+  .hex-area {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .hexText:hover {
+    font-size: 1.5em;
+  }
+  .hexText {
+    font-size: 1.5em;
+  }
+  .hex-area {
+    font-size: 1em;
+  }
 }
